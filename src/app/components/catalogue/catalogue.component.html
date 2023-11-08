@@ -1,6 +1,4 @@
-<p>catalogue works!</p>
-
-<input type=text name="productName" [(ngModel)]="productFilter">
+<app-product-search (filterChange)="changeProductFilter($event)"></app-product-search>
 <table>
   <tr>
     <th>Reference</th>
