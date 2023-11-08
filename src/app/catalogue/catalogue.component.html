@@ -1,0 +1,15 @@
+<p>catalogue works!</p>
+
+<input type=text name="productName" [(ngModel)]="productFilter">
+<table>
+  <tr>
+    <th>Reference</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let p of products$ | searchProducts: productFilter | async">
+    <td>{{p.reference}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+  </tr>
+</table>
