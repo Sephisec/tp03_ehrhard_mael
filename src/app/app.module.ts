@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import {HttpClientModule} from "@angular/common/http";
-import { SearchProductsPipe } from './search-produits.pipe';
 import {FormsModule} from "@angular/forms";
+import {SearchProductsPipe} from "./pipes/search-produits.pipe";
 
 @NgModule({
   declarations: [
