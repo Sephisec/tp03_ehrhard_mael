@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject, combineLatest, from, Observable} from "rxjs";
-import {CatalogueService} from "./catalogue.service";
-import {Product} from "../models/product";
+import {ApiService} from "../../services/api.service";
+import {Product} from "../../models/product";
 
 @Component({
   selector: 'app-catalogue',
@@ -10,7 +10,7 @@ import {Product} from "../models/product";
 })
 export class CatalogueComponent{
 
-  constructor(private readonly catalogueService: CatalogueService) {
+  constructor(private readonly catalogueService: ApiService) {
     this.products$ = this.catalogueService.getProducts();
   }
   products$: Observable<Product[]>;
