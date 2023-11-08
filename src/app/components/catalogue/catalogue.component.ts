@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {BehaviorSubject, combineLatest, from, Observable} from "rxjs";
+import {Component} from '@angular/core';
+import { Observable} from "rxjs";
 import {ApiService} from "../../services/api.service";
 import {Product} from "../../models/product";
 
@@ -14,7 +14,7 @@ export class CatalogueComponent{
     this.products$ = this.catalogueService.getProducts();
   }
 
-  productFilter: string='';
+  productFilter='';
 
   products$: Observable<Product[]>;
 
